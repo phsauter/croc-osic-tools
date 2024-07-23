@@ -25,7 +25,10 @@ RUN pip3 install --no-cache-dir -r /requirements.txt
 RUN wget https://github.com/chipsalliance/verible/releases/download/v0.0-3724-gdec56671/verible-v0.0-3724-gdec56671-linux-static-x86_64.tar.gz && \
     tar -xzf verible-v0.0-3724-gdec56671-linux-static-x86_64.tar.gz && \
     mkdir -p /foss/tools/verible/bin && \
-    cp verible-v0.0-3724-gdec56671/bin/* /foss/tools/verible/bin
+    cp verible-v0.0-3724-gdec56671/bin/* /foss/tools/verible/bin && \
+    rm -rf verible-v0.0-3724-gdec56671 && \
+    rm -f verible-v0.0-3724-gdec56671-linux-static-x86_64.tar.gz
+    
 RUN for file in /foss/tools/verible/bin/*; do \
         ln -sr "$file" /foss/tools/bin/; \
     done
