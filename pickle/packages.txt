@@ -1,0 +1,7 @@
+git
+lsb-release
+wget
+curl
+software-properties-common
+gnupg
+libboost-all-dev

@@ -1,0 +1,8 @@
+git
+wget
+tcl
+patch
+zip
+jq
+gcc-riscv64-linux-gnu
+binutils-riscv64-linux-gnu
